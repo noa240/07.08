@@ -9,10 +9,12 @@ body{
     display: grid;
     grid-template-rows: 15vh 75vh 10vh;
     grid-template-columns:30vw 70vw;
+    min-height: 150vh;
     grid-template-areas:
     "header header"
     "sidebar main "
     "footer footer";
+
 
 }
 li:hover{
@@ -27,6 +29,7 @@ li:hover{
     grid-area: header;
     display: flex;
     justify-content: space-evenly;
+    z-index: 20;
 }
 #header:hover{
     background: linear-gradient(90deg, rgba(53,121,9,1) 5%, rgba(216,237,210,1) 10% ,rgb(255, 255, 255) 90%, rgba(70,255,0,1) 100%);
@@ -91,9 +94,15 @@ li:hover{
     box-shadow: 4px 4px rgba(0, 0, 0, 0); 
     filter: drop-shadow(4px 4px);
     padding: 16px;
-    width: 300px; 
     width: 20vw;
+    z-index: 50;
   }
+  #main div:hover{
+  color: rgb(23, 242, 30);
+  text-shadow: 5px 5px rgb(23, 242, 30);
+  cursor: pointer;
+  transform: scale(1.2);
+z-index: 1000;}
 
 #main{
     grid-area:main;
@@ -101,13 +110,18 @@ li:hover{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    overflow: scroll;
+    margin-top: 2%;
 
 }
 #footer{
     background: rgb(53,121,9);
     background: linear-gradient(90deg, rgba(53,121,9,1) 30%, rgba(216,237,210,1) 53%, rgba(70,255,0,1) 100%);
     grid-area: footer;
+    position: absolute;
+    top: 170vh;
+    height: 20vh;
+    width: 100vw;
+
     
 
 }
