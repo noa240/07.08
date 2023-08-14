@@ -85,10 +85,13 @@ li:hover{
     height: auto;
 }
 #main div{
-    border: 1px black solid;
-    border-radius: 10%;
-    height: 40vh;
-}
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 16px;
+    width: 300px; 
+  }
+
 #main{
     grid-area:main;
     height: 150vh;
@@ -102,5 +105,6 @@ li:hover{
     background: rgb(53,121,9);
     background: linear-gradient(90deg, rgba(53,121,9,1) 30%, rgba(216,237,210,1) 53%, rgba(70,255,0,1) 100%);
     grid-area: footer;
+    
 
 }
